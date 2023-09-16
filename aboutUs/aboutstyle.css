@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+
+:root {
+    --red: #D35343;
+    --yellow: #FF8906;
+    --dark: #18262E;
+    --green: #224046;
+    --skin: #D9CEBB;
+    --basefont: sans-serif;
+    --headfont: sans-serif;
+    --head1: calc(1rem + 1vw);
+    --head2: calc(1rem + 1vw);
+    --text1: calc(0.5rem + 1vw);
+    --text2: calc(0.5rem + 1vw);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/*NAVBAR STYLING*/
+.navbar {
+    width: 97%;
+    margin: 0 auto;
+    background-color: #2C2E5B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4vh;
+    height: 6%;
+    border-radius: 0.4rem;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+}
+
+.logo {
+    transform: scale(0.8);
+}
+
+.navLink {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navLink a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: var(1vw + 0.3rem);
+    position: relative;
+}
+
+/**Adding hover effect to the links(Underline_effect)**/
+.navLink a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background: white;
+    width: 0%;
+    height: 0.1rem;
+    bottom: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.navLink a:hover::before {
+    width: 100%;
+}
+
+/*Hamburger Section Styling*/
+
+.hamburger-icon {
+    display: none;
+}
+
+.hamburger-section {
+    display: none;
+    position: absolute;
+    top: 6vh;
+    right: 0;
+    height: 80vh;
+    width: 35vw;
+    background: var(--dark);
+    opacity: 0.7;
+    transform: translateX(35vw);
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hamburger-section-show {
+    transform: translateX(1.4vw);
+}
+
+.hamburger-navbar {
+    overflow: visible;
+}
+
+.hamburger-section a {
+    color: white;
+    position: relative;
+}
+
+.hamburger-section a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background: white;
+    width: 0%;
+    height: 0.1rem;
+    bottom: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.hamburger-section a:hover::before {
+    width: 100%;
+}
+
+
+
+/*MAP SECTION STYLING*/
+.mapSection {
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--red);
+    text-align: center;
+}
+
+
+.container{
+    width:100%;
+    padding:2vh 2vw;
+    height:40vw;
+   
+    background: url("download.jpg"), #2C2E5B;
+    background-blend-mode:multiply;
+    position: relative;
+}
+.rect-box{
+    height:100%;
+    width:100%;
+    background: url("rectangle.png") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.card{
+    width:45%;
+    position: relative;
+    height:fit-content;
+}
+
+.card img{
+    width:80%;
+}
+
+.card-left{
+    position: relative;
+    left:10vw;
+    top:-5vh;
+}
+.card-right{
+    position: relative;
+    right:3vw;
+    top:5vh;
+}
+
+.card-content-section{
+    position: absolute;
+    width:70%;
+    height:70%;
+    top:4vh;
+    left:2.5vw;
+    text-align: center;
+    font-size: 1.4vw;
+}
+
+.card-content-section h1{
+    font-family: 'Gotu', sans-serif;
+    font-weight: 400;
+}
+.card-content-section p{
+    margin-top: 2vw;
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+}
+
+.footer {
+    width: 100vw;
+    height: 15vh;
+    background-color: #2C2E5B;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0.76vh 0;
+    font-family: 'Inter', sans-serif;
+    font-size: calc(1vw);
+}
+
+.social-media-icon {
+    align-self: flex-end;
+    margin-bottom: 2.1vh;
+    color: white;
+    font-size: calc(1vw + 0.4rem);
+    cursor: pointer;
+}
+
+.icon {
+    margin: 0px 0.3rem;
+}
+
+.contact-details p {
+    font-size: calc(1vw + 0.1rem);
+    color: white;
+    font-family: sans-serif;
+    margin: 0.2vh 0;
+}
+
+.contact-details h2 {
+    color: var(--yellow);
+    text-align: center;
+    margin-bottom: 0.3vh;
+    font-size: calc(1vw + 0.3rem);
+}
+
+
+/*media screen queries for the navbar creating a hamburger icon*/
+@media screen and (max-width:800px) {
+    .navLink {
+        width: 65vw;
+    }
+}
+
+@media screen and (max-width:560px) {
+
+    /*concept of hamburger icon*/
+    .navLink {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+        color: white;
+        font-size: var(--head1);
+        margin-right: 2vw;
+        margin-top: 0.4vh;
+    }
+
+    .navbar {
+        position: relative
+    }
+}
+
+
+
+
+@media screen and (min-width:560px) {
+    .hamburger-section {
+        display: none;
+    }
+}

@@ -1,0 +1,382 @@
+:root{
+  --red:#D35343;
+  --yellow:#FF8906;
+  --dark:#18262E;
+  --green:#224046;
+  --basefont:sans-serif;
+  --headfont:sans-serif;
+  --head1:calc(1rem + 1vw);
+  --head2:calc(1rem + 1vw);
+  --text1:calc(0.5rem +1vw);
+  --text2:calc(0.5rem +1vw);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.main-hero-section {
+  position: relative;
+  box-sizing: border-box;
+  height: 46vw;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-hero-section-background {
+  z-index: -4;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.main-hero-section-components {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Navbar section */
+
+.navbar {
+  width: 97%;
+  margin: 0 auto;
+  background-color: #2C2E5B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2vw;
+  height: 7%;
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+}
+
+.logo {
+  width: 10vw;
+}
+
+.navLink {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navLink a {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: var(1vw + 0.3rem);
+  text-decoration: none;
+  position: relative;
+}
+
+/**Adding hover effect to the links(Underline_effect)**/
+.navLink a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: white;
+  width: 0%;
+  height: 0.1rem;
+  bottom: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.navLink a:hover::before {
+  width: 100%;
+}
+
+.navbar-register-button {
+  background-color: #F6E1B9;
+  height: 4.5vh;
+  width: 10vw;
+  margin-right: 2vw;
+  border-radius: 1vh;
+  font-size: var(--text1);
+
+}
+
+/*Hamburger Section Styling*/
+
+.hamburger-icon {
+  display: none;
+}
+
+.hamburger-section {
+  display: none;
+  position: absolute;
+  top: 5vh;
+  right: 0;
+  height: 80vh;
+  width: 35vw;
+  background: var(--dark);
+  opacity: 0.7;
+  transform: translateX(35vw);
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hamburger-section-show {
+  transform: translateX(1.4vw);
+}
+
+.hamburger-navbar {
+  overflow: visible;
+}
+
+.hamburger-section a {
+  color: white;
+  position: relative;
+}
+
+.hamburger-section a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: white;
+  width: 0%;
+  height: 0.1rem;
+  bottom: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.hamburger-section a:hover::before {
+  width: 100%;
+}
+
+/*media screen queries for the navbar creating a hamburger icon*/
+@media screen and (max-width:800px) {
+  .navLink {
+      width: 65vw;
+  }
+  .navbar-register-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width:560px) {
+
+  /*concept of hamburger icon*/
+  .navLink {
+      display: none;
+  }
+  .navbar-register-button {
+    display: none;
+  }
+
+  .hamburger-icon {
+      display: block;
+      color: white;
+      font-size: var(--head1);
+      margin-right: 2vw;
+      margin-top: 0.4vh;
+  }
+
+  .navbar {
+      position: relative
+  }
+}
+
+/* Logo */
+
+.highway-to-alcher {
+  display: flex;
+  justify-content: space-around;
+  width: 95vw;
+  margin-bottom: 10vw;
+}
+
+.highway-to-alcher-image {
+  width: 40vw;
+}
+
+.spinner {
+    position: relative;
+    margin-right: 26vw;
+    width: 35vw;
+    height: 17vw;
+    overflow: visible;
+}
+
+.outer-elipse {
+    position: absolute;
+    z-index: -3;
+    border-radius: 50%;
+    background-color: var(--dark);
+    border: 1vw solid #d9cebb;
+    box-sizing: border-box;
+    width: 61vw;
+    height: 61vw;
+}
+
+.spinner-child {
+    position: absolute;
+    z-index: -2;
+    top: 2.5vw;
+    left: 2.5vw;
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+    border-radius: 50%;
+    border: 1vw dashed #d9cebb;
+    box-sizing: border-box;
+    width: 56vw;
+    height: 56vw;
+}
+
+.inner-red-elp {
+    position: absolute;
+    z-index: -1;
+    top: 5vw;
+    left: 5vw;
+    border-radius: 50%;
+    background-color: #cc3100;
+    border: 1vw solid #d9cebb;
+    box-sizing: border-box;
+    width: 51vw;
+    height: 51vw;
+}
+
+.monuments-icon {
+    position: absolute;
+    z-index: -2;
+    top: -12.5vw;
+    left: -10vw;
+    /* top: -10.5vw;
+    left:-10.5vw; */
+    width: 81vw;
+    height: 81vw;
+    /* -webkit-animation: spin 5s linear infinite;
+    -moz-animation: spin 5s linear infinite;
+    animation: spin 5s linear infinite; */
+}
+
+.city-selection-list {
+  position: absolute;
+  top: 38vw;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: var(--basefont);
+  color: #FFAD32;
+  font-size: 1.8vw;
+  z-index: 2;
+}
+
+.city-selection-list-input {
+  position: relative;
+  width: 20vw;
+}
+
+.city-selection-list-background {
+  z-index: -1;
+  position: absolute;
+  width: 20vw;
+}
+
+.city-selection-list-input-selector {
+  margin-top: 2vw;
+  width: 20vw;
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.city-selection-list-input-value {
+  margin-left: 1.2vw;
+  cursor: pointer;
+  padding: 0.5vw;
+}
+
+.city-selection-list-input-image {
+  cursor: pointer;
+  width: 2vw;
+  height: 1vw;
+  margin-right: 1.2vw;
+  transition: 0.5s;
+}
+
+.city-selection-list-input-image.active{
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.city-selection-list ul{
+  width: 19.3vw;
+  /* height: 10vw;
+  overflow-y: scroll; */
+  padding: 0;
+  margin: 0;
+  border:0.4vw solid #FFAD32;
+  list-style-type: none;
+}
+
+.city-selection-list-option {
+  display: none;
+}
+
+.city-selection-list-option.active{
+  display: block;
+}
+
+.city-selection-list-option li {
+  cursor: pointer;
+  padding: 0.5vw;
+}
+
+.city-selection-list-option li:nth-child(even) {
+  background: #3C3E70; 
+}
+
+.city-selection-list-option li:nth-child(odd) {
+  background: #212358;
+}
+
+/* Spin animation */
+
+@-webkit-keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+
+/* media query for main-hero-section */
+
+@media screen and (max-width:1000px) {
+  .main-hero-section {
+    height: 55vw;
+  }
+  .city-selection-list {
+    top: 46.5vw;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .main-hero-section {
+    height: 65vw;
+  }
+  .city-selection-list {
+    top: 56.5vw;
+  }
+}
+
+

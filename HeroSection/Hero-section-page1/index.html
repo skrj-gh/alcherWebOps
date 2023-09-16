@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-hero-section">
+        <img class="main-hero-section-background" src="public/hero-background.png"/>
+        <div class="main-hero-section-components">
+
+            <!-- nabar -->
+            <!-- <navbar class="navbar">
+                <img class="logo" src="public/Alcher.png" alt="">
+                <div class="navLink">
+                    <a href="">ABOUT US</a>
+                    <a href="">SCHEDULE</a>
+                    <a href="">SPONSORS</a>
+                    <a href="">CONTACT</a>
+                </div> -->
+                
+                <!--Hamburger menu for smaller mobile resolution!-->
+
+                <!-- <div class="hamburger-icon"><i class='bx bx-menu hamburger-icon'></i></div>
+                <div class="hamburger-section">
+                    <a href="">ABOUT US</a>
+                    <a href="">SCHEDULE</a>
+                    <a href="">SPONSORS</a>
+                    <a href="">CONTACT</a>
+                </div>
+                <button class="navbar-register-button">REGISTER</button>
+            </navbar> -->
+
+            <!-- Logo -->
+
+            <div class="highway-to-alcher"><img class="highway-to-alcher-image" src="public/Highway-to-alcher.png" alt=""/></div>
+
+            <!--Spinner -->
+
+            <div class="spinner">
+                <div class="outer-elipse"></div>
+                <div class="spinner-child"></div>
+                <img class="monuments-icon" alt="" src="./public/monuments.svg" />
+                <div class="inner-red-elp"></div>
+            </div>
+        </div>
+    </div>
+    <div class="city-selection-list">
+        <div class="city-selection-list-input">
+            <img src="public/list-background.png" class="city-selection-list-background" alt=""/>
+            <div class="city-selection-list-input-selector">
+                <div class="city-selection-list-input-value">CHOOSE CITY</div>
+                <img class="city-selection-list-input-image" src="public/down-arrow.png" alt=""/>
+            </div>
+        </div>
+        <ul class="city-selection-list-option">
+            <li onclick="show('DELHI')">DELHI</li>
+            <li onclick="show('LUCKNOW')">LUCKNOW</li>
+            <li onclick="show('INDORE')">INDORE</li>
+            <li onclick="show('BHUBANESWAR')">BHUBANESWAR</li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

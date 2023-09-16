@@ -1,0 +1,746 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
+:root {
+    --red: #D35343;
+    --yellow: #FF8906;
+    --dark: #18262E;
+    --green: #224046;
+    --skin: #D9CEBB;
+    --basefont: sans-serif;
+    --headfont: sans-serif;
+    --head1: calc(1rem + 1vw);
+    --head2: calc(1rem + 1vw);
+    --text1: calc(0.5rem + 1vw);
+    --text2: calc(0.5rem + 1vw);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/*NAVBAR STYLING*/
+.navbar {
+    width: 97%;
+    margin: 0 auto;
+    background-color: #2C2E5B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4vh;
+    height: 8%;
+    border-radius: 0.4rem;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+}
+
+.logo {
+    transform: scale(0.9);
+    margin-left: 1vw;
+}
+
+.navLink {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navLink a {
+    color: white;
+    font-size: 1.2vw;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+
+/**Adding hover effect to the links(Underline_effect)**/
+
+
+.register-btn{
+    padding:0.2vh 1vw;
+    height:4vh;
+    font-size: 1.1vw;
+    border:none;
+    outline:none;
+    background-color: var(--skin);
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+/*Hamburger Section Styling*/
+
+.hamburger-icon {
+    display: none;
+}
+
+.hamburger-section {
+    display: none;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    height: 80vh;
+    width: 35vw;
+    background: var(--dark);
+    opacity: 0.7;
+    transform: translateX(35vw);
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hamburger-section-show {
+    transform: translateX(1.4vw);
+}
+
+.hamburger-navbar {
+    overflow: visible;
+}
+
+.hamburger-section a {
+    color: white;
+    position: relative;
+}
+
+
+
+
+
+/*MAP SECTION STYLING*/
+.mapSection {
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--red);
+    text-align: center;
+}
+
+/*CSS for the competition-hover-center class*/
+.competition-hover-center {
+    width: 100vw;
+    background: url("download.jpg"), #2C2E5B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    background-blend-mode:multiply;
+}
+
+/*.competition-hover-center-show{
+    display:flex;
+}*/
+
+.row-section {
+    display: flex;
+    height: fit-content;
+    width: 100vw;
+    margin: 15vh 0vw;
+}
+
+/*.row-section-show{
+    display: flex;
+}*/
+
+.row-card-main-container-left,
+.row-card-main-container-right {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-card {
+    width: 60%;
+    height: fit-content;
+    background: url("card-design.png") no-repeat center center/contain;
+    transform: scale(1.4);
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.row-card-left {
+    position: relative;
+    right: 10vh;
+}
+
+.row-card-right {
+    position: relative;
+    left: 10vh;
+}
+
+
+
+.card-hover-content {
+    width: 52%;
+    height: 100%;
+    transform: scale(0.8);
+    border-radius: 0.4rem;
+    padding-bottom: 2vh;
+    position: relative;
+    right: 2.5vw;
+}
+
+.card-hover-content h4 {
+    color: #882785;
+    font-size: var(--text2);
+    margin: 0vh 1vw;
+    padding-top: 1.2vh;
+}
+
+.card-hover-content .comp-hover-type {
+    color: #882785;
+    margin: 0vh 1vw;
+    font-weight: 900;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-hover-content .comp-hover-des {
+    font-size: calc(0.9vw + 0.3rem);
+    margin: 1.2vh 1vw;
+    margin-bottom: 1.2vh;
+}
+
+
+
+.row-card-left .card-hover-content {
+    align-self: self-end;
+}
+
+.row-card-right .card-hover-content {
+    align-self: self-end;
+}
+
+
+.guideline-left-section{
+    z-index:1;
+    width:45%;
+    height:55vh;
+    position: relative;
+    visibility: hidden;
+    transform: scale(1);
+    
+}
+.guideline-left-section.guideline-left-show{
+    visibility: visible;
+
+}
+.guideline-left-section img{
+    position: absolute;
+    display: block;
+    height:100%;
+    width:100%;
+    transform: scale(-1);
+}
+
+.guideline-right-section{
+    z-index:1;
+    width:45%;
+    height:100%;
+    position: relative;
+    visibility: hidden;
+}
+.guideline-right-section.guideline-right-show{
+    visibility: visible;
+
+}
+.guideline-right-section img{
+    position: absolute;
+    display: block;
+    height:100%;
+    width:100%;
+    transform: scale(1);
+}
+
+.guideline-content{
+    position: absolute;
+    height:100%;
+    width:85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.guideline-content-left{
+    margin-left:0.5vw;
+}
+
+.guideline-content-right{
+    margin-left:2.5vw;
+}
+
+.guideline-content h2{
+    color:var(--skin);
+    font-size:1.5vw;
+}
+
+.guideline-box{
+    font-family: sans-serif;
+    font-size:1.1vw;
+    background: url("para-block.png") no-repeat center center/cover;
+    padding:1vh 1vw;
+}
+.guideline-right-section h2{
+    position: relative;
+}
+
+
+
+
+
+.btn {
+    display: block;
+    margin: 0.5vh 0.5vw;
+    width: 12vw;
+    transform: scale(0.8);
+    padding: 0.2vh 0.3vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+}
+
+/*css to the button guideline and register seperately*/
+.guideline-hover-Btn {
+    border: 0.1rem solid black;
+    border-radius: 0.3rem;
+    background: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.guideline-hover-Btn:hover {
+    background: var(--dark);
+    border-color: var(--dark);
+    color: white;
+    box-shadow: -3px -3px 2px var(--yellow);
+}
+
+.register-hover-Btn {
+    background: #882785;
+    color: white;
+    border-radius: 0.3rem;
+    border-color: #882785;
+    transition: all 0.4s ease-in-out;
+}
+
+.register-hover-Btn:hover {
+    box-shadow: 3px 3px 2px var(--yellow);
+}
+
+/*Styling for an ifram video*/
+.video-container {
+    /* Set the aspect ratio here (16:9 is a common choice) */
+ /* 16:9 aspect ratio */
+    background: #2C2E5B;
+    aspect-ratio: 16/ 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container iframe {
+    display: block;
+    width:60%;
+    height:60%;
+}
+
+/* Remove YouTube logo */
+.video-container iframe::-webkit-backdrop {
+    display: none;
+}
+
+/*CSS for the footer part*/
+
+.footer {
+    width: 100vw;
+    height: 20vh;
+    background-color: #2C2E5B;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0.76vh 0;
+    font-family: 'Inter', sans-serif;
+    font-size: calc(1vw);
+}
+
+.social-media-icon {
+    align-self: flex-end;
+    margin-bottom: 2.1vh;
+    color: white;
+    font-size: calc(1vw + 0.4rem);
+    text-align: center;
+}
+
+.social-media-icon i{
+    cursor: pointer;
+    padding:0vh 0.1vw;
+    
+}
+
+.footer-logo{
+    position: relative;
+    top:-3vh;
+}
+
+.footer-logo img{
+    transform: scale(0.8);
+}
+
+.icon {
+    margin: 0px 0.3rem;
+}
+
+.contact-details p {
+    font-size: calc(1vw + 0.1rem);
+    color: white;
+    font-family: sans-serif;
+    margin: 0.2vh 0;
+}
+
+.contact-details h2 {
+    color: var(--yellow);
+    text-align: center;
+    margin-bottom: 0.3vh;
+    font-size: calc(1vw + 0.3rem);
+}
+
+
+/*Media queries for the mobile version*/
+
+/*media screen queries for the navbar creating a hamburger icon*/
+@media screen and (max-width:930px) {
+    .navLink {
+        width: 65vw;
+    }
+}
+
+@media screen and (max-width:760px){
+    .navLink{
+        width:72vw;
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    /*concept of hamburger icon*/
+    .navLink {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+        color: white;
+        font-size: var(--head1);
+        margin-right: 2vw;
+        margin-top: 0.4vh;
+    }
+
+    .navbar {
+        position: relative
+    }
+}
+
+@media screen and (min-width:560px) {
+    .hamburger-section {
+        display: none;
+    }
+}
+
+/*Media Queries for the card-section i.e. competition center*/
+
+@media (max-width:1000px) and (orientation:portrait)  {
+
+    .guideline-left-section, .guideline-right-section{
+       
+        width:50%;
+        height:30vh;
+    }
+    
+    
+    .row-card {
+        width: 55%;
+    }
+
+    .row-section {
+        margin: 8vh 0;
+    }
+
+    .card-hover-content .comp-hover-des {
+        margin-bottom: 0;
+    }
+
+    .card-hover-content {
+        padding-bottom: 1vh;
+    }
+
+    .btn {
+        margin: 0.3vh 0vw;
+    }
+
+}
+
+@media  (max-width:880px) and (orientation:portrait)  {
+
+   
+
+    .row-card {
+        width: 60%;
+    }
+
+    .row-card-left {
+        right: 8vh;
+    }
+
+    .row-card-right {
+        left: 8vh;
+    }
+
+
+    .card-hover-content .comp-hover-type {
+        transform: scale(0.8);
+        margin-left: -2vw;
+    }
+
+}
+
+@media  (max-width:800px) and (orientation:portrait)  {
+    .card-hover-content .comp-hover-des {
+        margin: 0;
+    }
+
+    .card-hover-content h4 {
+        margin-left: 0;
+    }
+    .guideline-left-section, .guideline-right-section{
+        height:30vh;
+    }
+}
+
+
+@media  (max-width:730px) and (orientation:portrait)  {
+
+    .card-hover-content {
+        transform: scale(0.70);
+
+    }
+
+    .row-card-left {
+        right: 10vw;
+    }
+
+    .row-card-right {
+        left: 10vw;
+    }
+
+    .guideline-left-section, .guideline-right-section{
+        height:30vh;
+        transform: scale(1);
+    }
+    
+
+   
+
+}
+
+@media  (max-width:550px) and (orientation:portrait)  {
+    .row-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0vh 0vw;
+    }
+
+    .row-card-main-container-left,
+    .row-card-main-container-right {
+        width: 95%;
+        margin: 4vh auto;
+    }
+
+    .card-hover-content {
+        width: 40%;
+        position: relative;
+        left: -6vw;
+        top: -0.5vh;
+        transform: scale(0.85);
+    }
+
+    .row-card {
+        width: 50%;
+    }
+
+    .row-card-left {
+        right: 20vw;
+    }
+
+    .row-card-right {
+        left: 28vw;
+    }
+
+    .guideline-left-section, .guideline-right-section{
+        width:40%;
+        height:35vh;
+        position: relative;
+    }
+
+    .guideline-left-section{
+        position: relative;
+        left:-2vw;
+    }
+    .guideline-right-section{
+        position: relative;
+        right:-2vw;
+    }
+    .guideline-content-right{
+        margin-left: 3.7vw;
+    }
+
+
+   
+}
+
+@media  (max-width:430px) and (orientation:portrait)  {
+
+    .row-card {
+        width: 55%;
+        transform: scale(1.5);
+        margin:6vw 0vh;
+    }
+    .row-card-main-container-left, .row-card-main-container-right{
+        margin:5vh 0vw;
+    }
+
+    .guideline-left-section, .guideline-right-section{
+        height:30vh;
+    }
+
+    .guideline-left-section{
+        position: relative;
+        left:-2vw;
+    }
+    .guideline-right-section{
+        right:-2vw;
+    }
+
+    .guideline-content{
+        padding:1vh 1vw;
+    }
+    .guideline-content-right{
+        margin-left: 3.5vw;
+    }
+
+   
+
+    .row-section{
+        margin:5vh 0vw;
+    }
+    .row-card-right{
+    position: relative;
+    left:22.5vw;
+    }
+        
+
+}
+
+
+@media  (max-width:300px) and (orientation:portrait) {
+   
+    .row-card{
+        width:60%;
+    }
+
+    .row-section{
+        margin:2vh 0vw;
+    }
+    
+    .row-card-right{
+        position: relative;
+        left:19vw;
+    }
+    .guideline-left-section, .guideline-right-section{
+        height:30vh;
+    }
+
+    .guideline-left-section{
+        left:-2vw;
+    }
+  
+}
+
+
+@media (max-width:1000px) and (orientation:landscape){
+    .row-section{
+        margin:24vh 0vw;
+    }
+    .guideline-left-section , .guideline-right-section{
+        height:50vh;
+    }
+    .row-card-left{
+        right:10vw;
+    }
+    .row-card-right{
+        left:10vw;
+    }
+}
+
+@media (max-width:900px) and (orientation:landscape){
+    .row-section{
+        margin:20vh 0vw;
+    }
+    .row-card-left{
+        position: relative;
+        right:10vw;
+    }
+    .row-card-right{
+        position: relative;
+        left:13vw;
+    }
+    .guideline-left-section, .guideline-right-section{
+        height:70vh;
+    }
+
+}
+
+@media (max-width:770px) and (orientation:landscape){
+    .row-card-right{
+        position: relative;
+        left:8vw;
+    }
+    
+    .guideline-left-section, .guideline-right-section{
+        height:60vh;
+    }
+}
+
+@media (max-width:660px) and (orientation:landscape){
+    .guideline-left-section, .guideline-right-section{
+            height:70vh;
+    }
+}
+
+@media (max-width:550px) and (orientation:landscape){
+   .row-section{
+    margin:30vh 0vw;
+   }
+}

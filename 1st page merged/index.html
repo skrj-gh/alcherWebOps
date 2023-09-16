@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../HeroSection/Hero-section-page1/style.css" />
+    <link rel="stylesheet" href="../aboutUs/aboutstyle.css">
+    <link rel="stylesheet" href="../competition/compStyle.css">
+    <link rel="stylesheet" href="../Schedule/style.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>CE_Portal</title>
+</head>
+
+<body>
+    <div class="main-hero-section">
+        <img class="main-hero-section-background" src="../HeroSection/Hero-section-page1/public/hero-background.png"/>
+        <div class="main-hero-section-components">
+
+
+            <!-- NAVBAR integrated -->
+
+            <!-- Navbar -->
+            <navbar class="navbar">
+                <div class="logo"><img src="../competition/Alcher.png" alt=""></div>
+                <div class="navLink">
+                    <a href="">ABOUT US</a>
+                    <a href="">SCHEDULE</a>
+                    <a href="">SPONSORS</a>
+                    <a href="">CONTACT</a>
+                    <button class="register-btn">REGISTER</button>
+                </div>
+                <!--Hamburger menu for smaller mobile resolution!-->
+                <div class="hamburger-icon"><i class='bx bx-menu hamburger-icon'></i></div>
+                <div class="hamburger-section">
+                    <a href="">ABOUT US</a>
+                    <a href="">SCHEDULE</a>
+                    <a href="">SPONSORS</a>
+                    <a href="">CONTACT</a>
+                </div>
+            </navbar>
+
+            <!-- Logo -->
+
+            <div class="highway-to-alcher"><img class="highway-to-alcher-image" src="../HeroSection/Hero-section-page1/public/Highway-to-alcher.png" alt=""/></div>
+
+            <!-- Spinner -->
+
+            <div class="spinner">
+                <div class="outer-elipse"></div>
+                <div class="spinner-child"></div>
+                <img class="monuments-icon" alt="" src="../HeroSection/Hero-section-page1/public/monuments.svg" />
+                <div class="inner-red-elp"></div>
+            </div>
+        </div>
+    </div>
+    <div class="city-selection-list">
+        <div class="city-selection-list-input">
+            <img src="../HeroSection/Hero-section-page1/public/list-background.png" class="city-selection-list-background" alt=""/>
+            <div class="city-selection-list-input-selector">
+                <div class="city-selection-list-input-value">CHOOSE CITY</div>
+                <img class="city-selection-list-input-image" src="../HeroSection/Hero-section-page1/public/down-arrow.png" alt=""/>
+            </div>
+        </div>
+        <ul class="city-selection-list-option">
+            <li onclick="show('DELHI')">DELHI</li>
+            <li onclick="show('LUCKNOW')">LUCKNOW</li>
+            <li onclick="show('INDORE')">INDORE</li>
+            <li onclick="show('BHUBANESWAR')">BHUBANESWAR</li>
+        </ul>
+    </div>
+
+
+    <!-- ABOUT US PAGE integrated -->
+
+    <div class="container">
+        <div class="rect-box">
+            <div class="card card-left">
+                <img src="../aboutUs/block.png" alt="" class="card-component">
+                <div class="card-content-section">
+                    <h1>About Alcher</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ut. Sit vel quos sunt ea rem nihil facere autem voluptas. Officia labore fugiat voluptatem nam, dolorem tenetur sapiente doloremque culpa!</p>
+                </div>
+            </div>
+            <div class="card card-right">
+                <img src="../aboutUs/block.png" alt="" class="card-component">
+                <div class="card-content-section">
+                    <h1>About Alcher</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ut. Sit vel quos sunt ea rem nihil facere autem voluptas. Officia labore fugiat voluptatem nam, dolorem tenetur sapiente doloremque culpa!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCHEDULE PAGE integrated -->
+
+    <div class="content">
+        <div class="image">
+          <div class="text">
+            <h2>Fest-Flow</h2>
+            <h3>Navigating through the frenzy!</h3>
+          </div>
+          <img class="elephant" src="../Schedule/images/elephant.png" />
+        </div>
+        <div class="accordion-container">
+          <ul>
+            <li class="card active" id="start">
+              <div class="accordion">
+                <div class="outbox">14th Feburary</div>
+                <div class="panel">
+                  <div class="events">
+                    <h3>Electric Heels</h3>
+                    <h3>So you think you can dance</h3>
+                    <h3>this is POP</h3>
+                    <h3>SA RE GA MA</h3>
+                  </div>
+                  <div class="time">
+                    <h3>10:00 AM</h3>
+                    <h3>12:00 PM</h3>
+                    <h3>2:00 PM</h3>
+                    <h3>4:00 PM</h3>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" id="second">
+              <div class="accordion1">
+                <div class="outbox">15th Feburary</div>
+                <div class="panel">
+                  <div class="events">
+                    <h3>Electric Heels</h3>
+                    <h3>So you think you can dance</h3>
+                    <h3>this is POP</h3>
+                    <h3>SA RE GA MA</h3>
+                  </div>
+                  <div class="time">
+                    <h3>10:00 AM</h3>
+                    <h3>12:00 PM</h3>
+                    <h3>2:00 PM</h3>
+                    <h3>4:00 PM</h3>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" id="first">
+              <div class="accordion">
+                <div class="outbox">15th Feburary</div>
+                <div class="panel">
+                  <div class="events">
+                    <h3>Electric Heels</h3>
+                    <h3>So you think you can dance</h3>
+                    <h3>this is POP</h3>
+                    <h3>SA RE GA MA</h3>
+                  </div>
+                  <div class="time">
+                    <h3>10:00 AM</h3>
+                    <h3>12:00 PM</h3>
+                    <h3>2:00 PM</h3>
+                    <h3>4:00 PM</h3>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" id="second">
+              <div class="accordion1">
+                <div class="outbox">17th Feburary</div>
+                <div class="panel">
+                  <div class="events">
+                    <h3>Electric Heels</h3>
+                    <h3>So you think you can dance</h3>
+                    <h3>this is POP</h3>
+                    <h3>SA RE GA MA</h3>
+                  </div>
+                  <div class="time">
+                    <h3>10:00 AM</h3>
+                    <h3>12:00 PM</h3>
+                    <h3>2:00 PM</h3>
+                    <h3>4:00 PM</h3>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" id="first">
+              <div class="accordion1">
+                <div class="outbox">17th Feburary</div>
+                <div class="panel">
+                  <div class="events">
+                    <h3>Electric Heels</h3>
+                    <h3>So you think you can dance</h3>
+                    <h3>this is POP</h3>
+                    <h3>SA RE GA MA</h3>
+                  </div>
+                  <div class="time">
+                    <h3>10:00 AM</h3>
+                    <h3>12:00 PM</h3>
+                    <h3>2:00 PM</h3>
+                    <h3>4:00 PM</h3>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" id="second">
+              <div class="accordion1">
+                <div class="outbox">15th Feburary</div>
+                <div class="panel">
+                  <div class="events">
+                    <h3>Electric Heels</h3>
+                    <h3>So you think you can dance</h3>
+                    <h3>this is POP</h3>
+                    <h3>SA RE GA MA</h3>
+                  </div>
+                  <div class="time">
+                    <h3>10:00 AM</h3>
+                    <h3>12:00 PM</h3>
+                    <h3>2:00 PM</h3>
+                    <h3>4:00 PM</h3>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- FOOTER PAGE integrated -->
+
+    <!--Alcher after movie section-->
+    <div class="video-container">
+        <iframe src="../competition/Alcher.mp4" frameborder="1" allowfullscreen></iframe>
+    </div>
+
+    <hr>
+    
+    <!--Footer section-->
+    <footer class="footer">
+        <div class="nav-links">
+            <a href="">ABOUT US</a>
+            <a href="">SCHEDULE</a>
+            <a href="">SPONSORS</a>
+        </div>
+
+        <div class="social-media-icon">
+            <div class="footer-logo"><img src="../competition/Alcher.png" alt=""></div>
+            <div class="icons">
+                <i class='bx bxl-instagram icon'></i>
+                <i class='bx bxl-linkedin-square icon'></i>
+                <i class='bx bxl-facebook-circle icon'></i>
+                <i class='bx bxl-twitter icon'></i>
+                <i class='bx bxl-youtube icon'></i>
+            </div>
+
+        </div>
+
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <p>Siddhant Singh <br>PR Head</p>
+            <p class="contact-no">+91 1234567890</p>
+        </div>
+
+    </footer>
+    
+    <!--Adding js file-->
+    <script src="../HeroSection/Hero-section-page1/script.js"></script>
+    <script src="../competition/compApp.js"></script>
+    <script src="../Schedule/script.js"></script>
+</body>
+
+</html>
