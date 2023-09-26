@@ -1,0 +1,469 @@
+body{
+    /* overflow-x: hidden !important; */
+    max-width: 100vw !important;
+}
+
+.registeration-div{
+    width: 97%;
+    margin: 5% auto 0;
+    height: fit-content;
+}
+
+.reg{
+    width:fit-content;
+    margin: 0 auto;
+}
+
+.reg h1{
+    font-family: 'Gotu';
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 3% auto 0;
+}
+
+.arrow{
+    position: relative;
+    background-image: url('./images/arrow-bg.png');
+    background-repeat: no-repeat;
+    width: 10vw !important;
+    height: calc((277/425)*10vw);
+    z-index: 10;
+    background-size:cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.arrows img{
+    width: 3vw;
+}
+
+.form{
+    width: 60%;
+    margin: 3% auto 0;
+}
+
+.form p {
+    font-family: 'Karla';
+    color: #212358;
+    font-size: 2vw;
+    font-weight: 900;
+}
+
+.form span{
+    color: #D3215D;
+    font-family: 'karla';
+    font-weight: 900;
+}
+
+.team_name{
+    padding: 8% 0;
+    width: 50%;
+}
+
+.form-field{
+    font-size: 18px;
+    font-family: 'Karla';
+    color: #2A2C56;
+    font-weight: 900;
+}
+
+input{
+    width: 100%;
+    padding: 12px 10px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #000;
+}
+
+select{
+    width: 100%;
+    padding: 12px 10px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #000;
+}
+
+#select option{
+    width: 80%;
+    padding: 12px 10px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #000;
+}
+
+.mem_head{
+    display: flex;
+}
+.mem_info{
+    display: flex;
+    justify-content: space-between;
+    margin: 4% 0;
+}
+
+.mem_info img{
+    height: 30px;
+    width: 20%;
+}
+
+.mem_info div{
+    width: 100%;
+}
+
+.mem_info h3{
+    font-size: 2.4vw;
+    font-weight:bolder;
+    font-family: 'Karla';
+    color: #2B2C58;
+    margin-bottom: 1%;
+}
+
+.parent-div {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    overflow-y: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* .main-hero-section-comp {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+} */
+
+.main-hero-section-bg {
+    z-index: -4;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* Buttons */
+.action-buttons{
+    display: flex;
+    align-items: center;
+}
+.button-register{
+   background-color: #F22405;
+   border-radius: 15px;
+   padding: 0.5vw 3.5vw;
+   margin-top: 10vh;
+   color: white;
+   border: none;
+   align-items: center;
+    margin-bottom: 10%;
+    display: flex;
+}
+.button-register p{
+    font-family: 'DM Sans';
+    font-weight: 300;
+    font-size: 4vh;
+    color: white;
+    /* margin-left: 2px; */
+}
+.button-register:hover{
+    cursor: pointer;
+}
+
+.button-addmember{
+    background-color: #3C3E70;
+    justify-content: center;
+    /* gap: 1vw; */
+   padding: 0.5vw 3.5vw;
+   /* height: 3vh; */
+   
+   border-radius: 9999px;
+   align-items: center;
+   display: flex;
+   border: none;
+
+}
+
+.button-addmember:hover{
+    cursor: pointer;
+}
+
+.button-addmember p{
+    font-family: 'Karla';
+    font-weight: 900;
+    font-size: 3vh;
+    color: white;
+    margin-left: 2px;
+}
+
+.person-addmember{
+    height: 20px;
+    width: 20px;
+}
+.button-deletemember{
+    background-color: #F25F4C;
+    justify-content: center;
+    border-color: #3C3E70;
+    /* gap: 1vw; */
+    padding: 0.5vw 3.5vw;
+   /* height: 2vh; */
+   margin-left: 2vw;
+   border-radius: 9999px;
+   align-items: center;
+   display: flex;
+}
+
+.button-deletemember:hover{
+    cursor: pointer;
+}
+
+.button-deletemember p{
+    font-family: 'Karla';
+    font-weight: 900;
+    font-size: 3vh;
+    color: #000;
+    margin-left: 2px;
+}
+
+.person-deletemember{
+    height: 20px;
+    width: 20px;
+}
+
+.element{
+  background-image: url('./images/same-flag1.png');
+  background-repeat: no-repeat;
+  width: 30% !important;
+  height: 30px;
+  background-size:cover;
+  /* color: white; */
+  /* background-size: 200px 100px; */
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+.element:hover{
+    cursor: pointer;
+}
+
+.element p {
+    color: white;
+    padding-left: 5vw;
+    font-family: 'Karla';
+    font-weight: 900;
+    font-size: 1.6vw !important;
+}
+
+.nav-div{
+    /* overflow-x: hidden !important; */
+    max-width: 100% !important;  
+}
+
+.mem-element{
+    width: 30% !important;
+    height: 30px;
+    background-size:cover;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+.mem-element p{
+    color: #2B2C58;
+    font-family: 'Karla';
+    font-weight: 900;
+    font-size: 1.6vw;
+}
+
+.mem-no{
+    background-image: url('./images/mem-no.png');
+    background-repeat: no-repeat;
+    width: 20px !important;
+    height: 40px;
+    /* padding-left: 3px; */
+    background-size:cover;
+    /* color: white; */
+    /* background-size: 200px 100px; */
+    align-items:center;
+    justify-content: center;
+    display: flex;
+}
+
+.mem-no p{
+    color:white;
+    font-family: 'Karla';
+    font-weight: 900;
+    font-size: 2.6vh;
+}
+
+.left-input-field{
+    padding-right: 10%;
+}
+
+.right-input-field{
+    padding-left: 10%;
+}
+
+.same-flag{
+    /* input[type=text] {
+        height:5vh;
+        border-radius: 4vh;
+        font-size: 2vh;
+        background-color: #f3f3f3;
+        border-style: none;
+        background-image: url('search.jpg');
+        background-size: 4vh;
+        background-position: 0.5vh 0.9vh; 
+        background-repeat: no-repeat;
+        padding-left:7vw;
+    } */
+    background-image: url('./images/same-flag.png');
+    background-size: 45%;
+    background-position: 97% 50%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    
+
+    .form{
+        width: 70%;
+        margin: 3% auto 0;
+    }
+
+    .left-input-field{
+        padding-right: 5%;
+    }
+
+    .right-input-field{
+        padding-left: 5%;
+    }
+
+        .button-register{
+            margin-top: 4vh;
+            margin-bottom: 6vh ;
+        }
+
+    /* .action-buttons{
+        justify-content: center;
+    } */
+
+    .element p {
+        font-size: 1.5vw !important;
+    }
+
+    .mem_info h3{
+        font-size: 20px;
+    }
+
+    .heading{
+        flex-direction: row;
+    }
+
+
+
+    .form p {
+        font-size: 20px;
+    }
+
+    .mem-element{
+        width: 40% !important;
+    }
+
+    .mem-element p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:700px){
+    .element{
+        background-image: url('./images/same-flag.png');
+        background-repeat: no-repeat;
+        width: 30% !important;
+        height: 30px;
+        background-size:cover;
+        /* color: white; */
+        /* background-size: 200px 100px; */
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 8px;
+    }
+
+    .element p {
+        font-size: 2vw !important;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    .form{
+        width: 80%;
+        margin: 3% auto 0;
+    }
+
+    .mem_info{
+        flex-direction: column;
+    }
+
+    .left-input-field{
+        padding-right: 0;
+    }
+
+    .right-input-field{
+        padding-left: 0;
+    }
+
+    .button-register{
+        margin-top: 4vh;
+        margin-bottom: 6vh ;
+    }
+
+    .action-buttons{
+        justify-content: center;
+    }
+
+    .element p {
+        font-size: 2.4vw !important;
+    }
+
+    .mem_info h3{
+        font-size: 20px;
+    }
+
+    .heading{
+        flex-direction: row;
+    }
+
+    .team_name{
+        padding: 8% 0;
+        width: 100%;
+    }
+
+    .form p {
+        font-size: 12px;
+    }
+
+    .mem-element{
+        width: 40% !important;
+    }
+
+    .mem-element p{
+        font-size: 15px;
+    }
+}

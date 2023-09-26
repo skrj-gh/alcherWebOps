@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../HeroSection/Hero-section-page1/style.css" />
+    <link rel="stylesheet" href="../aboutUs/aboutstyle.css">
+    <link rel="stylesheet" href="../competition/compStyle.css">
+    <link rel="stylesheet" href="../Schedule/style.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Member Registeration</title>
+</head>
+
+<body>
+    <div class="parent-div">
+        <img class="main-hero-section-bg" src="../HeroSection/Hero-section-page1/public/hero-background.png"/>
+        <!-- <div class="main-hero-section-comp"> -->
+
+
+            <!-- NAVBAR integrated -->
+
+            <!-- Navbar -->
+            <div class="nav-div">
+                <navbar class="navbar">
+                    <div class="logo"><img src="../competition/Alcher.png" alt="alcher-logo"></div>
+                    <div class="navLink">
+                        <a href="">ABOUT US</a>
+                        <a href="">SCHEDULE</a>
+                        <a href="">SPONSORS</a>
+                        <a href="">CONTACT</a>
+                        <button class="register-btn">REGISTER</button>
+                    </div>
+                    <!--Hamburger menu for smaller mobile resolution!-->
+                    <div class="hamburger-icon"><i class='bx bx-menu hamburger-icon'></i></div>
+                    <div class="hamburger-section">
+                        <a href="">ABOUT US</a>
+                        <a href="">SCHEDULE</a>
+                        <a href="">SPONSORS</a>
+                        <a href="">CONTACT</a>
+                    </div>
+                </navbar>
+            </div>
+            
+
+           
+
+            <div class="registeration-div">
+                <div class="reg">
+                    <h1>Registerations</h1>
+                </div>
+                <div class="arrows">
+                    <a href="registeration.html"><div class="arrow"><img src="./images/arrow-back.png" alt="back"></div></a>
+                    <a href="member-registeration.html"><div class="arrow"><img src="./images/arrow-next.png" alt="next"></div></a>
+                </div>
+                <div class="form">
+                    <p>All fields marked with <span>*</span> are mandatory.</p>
+
+                    <form action="" class="info">
+                        <div class="team_name left-input-field">
+                            <label for="team_name" class="form-field">Team Name <span>*</span></label><br>
+                            <input type="text" id="team_name" name="team_name" class="form-field">
+                            <!-- <label for="team_name"></label>
+                            <input type="text" id="team_name" name="team_name" class="form-field"> -->
+                        </div>
+                        <div class="head_data">
+                            <div class="mem_info heading">
+                                <h3>Member's data:</h3>
+                                <!-- <img src="./images/same-flag.png" alt="same as leader"> -->
+                                <div class="mem-element">
+                                    <p>Member no.<pre>   </pre><div class="mem-no"><p>1</p></div></p>
+                                </div>
+                            </div>
+
+                            <div class="mem_info">
+                                <div class="left-input-field">
+                                    <label for="members_name" class="form-field">Member's Name <span>*</span></label><br>
+                                    <input type="text" id="members_name" name="members_name" class="form-field">
+                                </div>
+                                <div class="right-input-field">
+                                    <label for="gender" class="form-field">Gender <span>*</span></label><br>
+                                    <!-- <input type="" id="team_name" name="team_name" class="form-field"> -->
+                                    <select id="select" name="gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mem_info">
+                                <div class="left-input-field">
+                                    <label for="members_contact_number" class="form-field">Member's Contact Number <span>*</span></label><br>
+                                    <input type="text" id="members_contact_number" name="members_contact_number" class="form-field">
+                                </div>
+                                <div class="right-input-field">
+                                    <label for="email" class="form-field">E - mail <span>*</span></label><br>
+                                    <input type="text" id="email" name="email" class="form-field same-flag">
+                                </div>
+                            </div>
+                            <div class="mem_info">
+                                <div class="left-input-field">
+                                    <label for="program_enrolled" class="form-field">Program Enrolled <span>*</span></label><br>
+                                    <input type="text" id="program_enrolled" name="program_enrolled" class="form-field same-flag">
+                                </div>
+                                <div class="right-input-field">
+                                    <label for="institute_name" class="form-field">Institute Name <span>*</span></label><br>
+                                    <input type="text" id="institute_name" name="institute_name" class="form-field same-flag">
+                                </div>
+                            </div>
+                            <div class="mem_info">
+                                <div class="left-input-field">
+                                    <label for="year_of_passing" class="form-field">Year Of Passing <span>*</span></label><br>
+                                    <input type="text" id="year_of_passing" name="year_of_passing" class="form-field same-flag">
+                                </div>
+                                <div class="right-input-field">
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                    <div class="action-buttons">
+                        <button class="button-addmember">
+                            <img class="person-addmember" src="./images/Group 120.png">
+                            <p>Add Member</p>
+                        </button>
+                        <button class="button-deletemember">
+                            <img class="person-deletemember" src="./images/g.png">
+                            <p>Delete Member</p>
+                        </button>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <button class="button-register">
+                            <p>Register</p>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        <!-- </div> -->
+    </div>
+
+
+    <!-- FOOTER PAGE integrated -->
+
+    <!--Alcher after movie section-->
+    <div>
+        <div class="video-container">
+            <iframe src="../competition/Alcher.mp4" frameborder="1" allowfullscreen></iframe>
+        </div>
+    
+        <hr>
+        
+        <!--Footer section-->
+        <footer class="footer">
+            <div class="nav-links">
+                <a href="">ABOUT US</a>
+                <a href="">SCHEDULE</a>
+                <a href="">SPONSORS</a>
+            </div>
+    
+            <div class="social-media-icon">
+                <div class="footer-logo"><img src="../competition/Alcher.png" alt=""></div>
+                <div class="icons">
+                    <i class='bx bxl-instagram icon'></i>
+                    <i class='bx bxl-linkedin-square icon'></i>
+                    <i class='bx bxl-facebook-circle icon'></i>
+                    <i class='bx bxl-twitter icon'></i>
+                    <i class='bx bxl-youtube icon'></i>
+                </div>
+    
+            </div>
+    
+            <div class="contact-details">
+                <h2>Contact Us</h2>
+                <p>Siddhant Singh <br>PR Head</p>
+                <p class="contact-no">+91 1234567890</p>
+            </div>
+    
+        </footer>
+    </div>
+    
+    
+    <!--Adding js file-->
+    <script src="../HeroSection/Hero-section-page1/script.js"></script>
+    <script src="../competition/compApp.js"></script>
+    <script src="../Schedule/script.js"></script>
+</body>
+
+</html>
