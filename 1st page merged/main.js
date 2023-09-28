@@ -13,7 +13,7 @@ function showTab(n) {
 
   var head_form = document.getElementsByClassName("mem_form")[n-1];
   var mem_form = document.getElementsByClassName("mem_form")[n];
-  // var next_mem_form = document.getElementsByClassName("mem_form")[n+1];
+  var next_mem_form = document.getElementsByClassName("mem_form")[n+1];
   
   if (n == 0) {
     document.getElementsByClassName("fake_arr_back")[0].style.display = "flex";
@@ -21,22 +21,22 @@ function showTab(n) {
     document.getElementsByClassName("arr_back")[0].style.display = "none";
 
 
-
-
     mem_form.style.display = "block";
-    // next_mem_form.style.display = "none";
+
+    if(tab.indexOf(n+1) != -1){
+      next_mem_form.style.display = "none";
+    }
   } else {
-    // document.getElementsByClassName("mem-element")[0].style.display = "flex";
     document.getElementsByClassName("fake_arr_back")[0].style.display = "none";
     document.getElementsByClassName("arr_back")[0].style.display = "flex";
     document.getElementsByClassName("button-deletemember")[0].style.display = "flex";
 
 
-
-
     head_form.style.display = "none";
     mem_form.style.display = "block";
-    // next_mem_form.style.display = "none";
+    if(tab.indexOf(n+1) != -1){
+      next_mem_form.style.display = "none";
+    }
   }
 }
 
@@ -57,11 +57,12 @@ function appendForms(){
           <div class="mem_info">
               <div class="left-input-field">
                   <label for="members_name" class="form-field">Member's Name <span>*</span></label><br>
-                  <input type="text" id="members_name" name="members_name" class="form-field">
+                  <input type="text" name="members_name" class="form-field">
               </div>
               <div class="right-input-field">
                   <label for="gender" class="form-field">Gender <span>*</span></label><br>
-                  <select id="gender" name="gender">
+                  <select name="gender">
+                      <option value="" disabled selected>Select your option</option>
                       <option value="male">Male</option>
                       <option value="female">Female</option>
                       <option value="others">Others</option>
@@ -71,12 +72,12 @@ function appendForms(){
           <div class="mem_info">
               <div class="left-input-field">
                   <label for="members_contact_number" class="form-field">Member's Contact Number <span>*</span></label><br>
-                  <input type="text" id="members_contact_number" name="members_contact_number" class="form-field">
+                  <input type="text" name="members_contact_number" class="form-field">
               </div>
               <div class="right-input-field">
                   <label for="email" class="form-field">E - mail <span>*</span></label><br>
                   <div class="same_input">
-                    <input type="text" id="email" name="email" class="form-field same-flag email">
+                    <input type="text" name="email" class="form-field same-flag email">
                     <div class="same_as_leader" onclick="sameAsLeader('e')"><p>Same as Leader</p></div>
                   </div>
               </div>
@@ -85,14 +86,14 @@ function appendForms(){
               <div class="left-input-field">
                   <label for="program_enrolled" class="form-field">Program Enrolled <span>*</span></label><br>
                   <div class="same_input">
-                    <input type="text" id="program_enrolled" name="program_enrolled" class="form-field same-flag program_enrolled">
+                    <input type="text" name="program_enrolled" class="form-field same-flag program_enrolled">
                     <div class="same_as_leader" onclick="sameAsLeader('p')"><p>Same as Leader</p></div>
                   </div>
               </div>
               <div class="right-input-field">
                   <label for="institute_name" class="form-field">Institute Name <span>*</span></label><br>
                   <div class="same_input">
-                    <input type="text" id="institute_name" name="institute_name" class="form-field same-flag institute_name">
+                    <input type="text" name="institute_name" class="form-field same-flag institute_name">
                     <div class="same_as_leader" onclick="sameAsLeader('i')"><p>Same as Leader</p></div>
                   </div>
               </div>
@@ -101,7 +102,7 @@ function appendForms(){
               <div class="left-input-field">
                   <label for="year_of_passing" class="form-field">Year Of Passing <span>*</span></label><br>
                   <div class="same_input">
-                    <input type="text" id="year_of_passing" name="year_of_passing" class="form-field same-flag year_of_passing">
+                    <input type="text" name="year_of_passing" class="form-field same-flag year_of_passing">
                     <div class="same_as_leader" onclick="sameAsLeader('y')"><p>Same as Leader</p></div>
                   </div>
               </div>
@@ -114,24 +115,29 @@ function appendForms(){
 
     </div>
 
-  `
-    document.getElementById("info").innerHTML += code;
+  ` 
+  form = document.getElementById("info");
+  form.insertAdjacentHTML('beforeend', code);
+
+// console.log(document.getElementById("info").innerHTML);
+//     document.getElementById("info").innerHTML += code;
+// console.log(document.getElementById("info").innerHTML);
+
 }
 
 
 function addMember(n) {
-  // if (!validateForm()) return false;
+
   appendForms();
+
   var head_form = document.getElementsByClassName("mem_form")[n-1];
   var mem_form = document.getElementsByClassName("mem_form")[n];
-  
-  // document.getElementsByClassName("mem-element")[0].style.display = "flex";
+
   document.getElementsByClassName("fake_arr_back")[0].style.display = "none";
   document.getElementsByClassName("arr_back")[0].style.display = "flex";
   document.getElementsByClassName("button-deletemember")[0].style.display = "flex";
   head_form.style.display = "none";
   mem_form.style.display = "block";
-  
   
 }
 
@@ -143,6 +149,7 @@ function nextPrev(n) {
   currentTab = currentTab + n;
 
   if(tab.indexOf(currentTab) == -1){
+    alert("No next page exists, ADD Memebers");
     currentTab = currentTab - n;
     return false;
   }
@@ -150,7 +157,7 @@ function nextPrev(n) {
   console.log(currentTab);
   
   if (currentTab >= numOfParticipants) {
-    document.getElementById("info").submit();
+    // document.getElementById("info").submit();
     return false;
   }
   
@@ -162,19 +169,28 @@ function nextPrev(n) {
 
 function addMem() {
 
-  if (!validateForm()) return false;
+  if (!validateForm()){
+    alert("Fields are still empty");
+    return false;
+  }
 
+  // console.log(document.getElementById('team_heads_name').value);
+  // console.log(0);
   numOfMem++;
+  var i;
 
-  currentTab++;
+  for(i=currentTab;i<tab.length;i++){
+    currentTab++;
+  }
+  
   
   tab.push(currentTab);
-  
+  console.log(tab);
   console.log(currentTab);
 
   if (currentTab >= numOfParticipants) {
 
-    console.log("Can't add more members");
+    alert("Can't add more members");
     return false;
   
   }
@@ -182,20 +198,24 @@ function addMem() {
   addMember(currentTab);
 }
 
+
 function delMem(){
-  if(currentTab == 0){
-    console.log("Can't remove leader");
-    return false;
-  }
+  console.log('del yaha bhi aa raha hai');
 
   numOfMem--;
 
   var i;
+  
   for(i=currentTab+1;i<tab.length;i++){
+    console.log(1362);
     tab[i]--;
   }
 
-  tab.splice(currentTab,currentTab+1);
+  console.log(tab);
+
+  tab.splice(currentTab,currentTab);
+  
+  console.log(tab);
 
   currentTab = currentTab --;
 
@@ -236,12 +256,12 @@ heads_year_of_passing.addEventListener("input", function(){
 
 function submitForm(){
   if (!validateForm()){
-    console.log("Wrong Submission!!!");
+    alert("Wrong Submission!!!");
     return false;
   }
 
   document.getElementById("info").submit();
-  console.log("Successful Submission");
+  alert("Successful Submission");
 }
 
 
@@ -278,9 +298,10 @@ function validateForm() {
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    if (y[i].value == "") {
+    if (y[i].value === "") {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
+      // console.log(y[i]);
       // and set the current valid status to false
       valid = false;
     }
@@ -288,9 +309,10 @@ function validateForm() {
 
   for (i = 0; i < u.length; i++) {
     // If a field is empty...
-    if (u[i].value == "") {
+    if (u[i].value === "") {
       // add an "invalid" class to the field:
       u[i].className += " invalid";
+      // console.log(u[i]);
       // and set the current valid status to false
       valid = false;
     }
@@ -298,13 +320,16 @@ function validateForm() {
 
   for (i = 0; i < w.length; i++) {
     // If a field is empty...
-    if (w[i].value == "") {
+    if (w[i].value === "") {
       // add an "invalid" class to the field:
       w[i].className += " invalid";
+      // console.log(w[i]);
       // and set the current valid status to false
       valid = false;
     }
   }
+
+  console.log(valid);
 
   return valid; 
 }
