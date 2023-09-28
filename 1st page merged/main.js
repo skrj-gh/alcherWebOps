@@ -77,7 +77,7 @@ function appendForms(){
                   <label for="email" class="form-field">E - mail <span>*</span></label><br>
                   <div class="same_input">
                     <input type="text" id="email" name="email" class="form-field same-flag email">
-                    <div class="same_as_leader" onclick="sameAsLeader('e')"></div>
+                    <div class="same_as_leader" onclick="sameAsLeader('e')"><p>Same as Leader</p></div>
                   </div>
               </div>
           </div>
@@ -86,14 +86,14 @@ function appendForms(){
                   <label for="program_enrolled" class="form-field">Program Enrolled <span>*</span></label><br>
                   <div class="same_input">
                     <input type="text" id="program_enrolled" name="program_enrolled" class="form-field same-flag program_enrolled">
-                    <div class="same_as_leader" onclick="sameAsLeader('p')"></div>
+                    <div class="same_as_leader" onclick="sameAsLeader('p')"><p>Same as Leader</p></div>
                   </div>
               </div>
               <div class="right-input-field">
                   <label for="institute_name" class="form-field">Institute Name <span>*</span></label><br>
                   <div class="same_input">
                     <input type="text" id="institute_name" name="institute_name" class="form-field same-flag institute_name">
-                    <div class="same_as_leader" onclick="sameAsLeader('i')"></div>
+                    <div class="same_as_leader" onclick="sameAsLeader('i')"><p>Same as Leader</p></div>
                   </div>
               </div>
           </div>
@@ -102,7 +102,7 @@ function appendForms(){
                   <label for="year_of_passing" class="form-field">Year Of Passing <span>*</span></label><br>
                   <div class="same_input">
                     <input type="text" id="year_of_passing" name="year_of_passing" class="form-field same-flag year_of_passing">
-                    <div class="same_as_leader" onclick="sameAsLeader('y')"></div>
+                    <div class="same_as_leader" onclick="sameAsLeader('y')"><p>Same as Leader</p></div>
                   </div>
               </div>
               <div class="right-input-field">
@@ -203,6 +203,37 @@ function delMem(){
 }
 
 
+
+
+
+var heads_email = document.getElementById("heads_email");
+var heads_program_enrolled = document.getElementById("heads_program_enrolled");
+var heads_institute_name = document.getElementById("heads_institute_name");
+var heads_year_of_passing = document.getElementById("heads_year_of_passing");
+
+var heads_email_value, heads_program_enrolled_value, heads_institute_name_value, heads_year_of_passing_value;
+
+heads_email.addEventListener("input", function(){
+  heads_email_value = heads_email.value;
+});
+
+heads_program_enrolled.addEventListener("input", function(){
+  heads_program_enrolled_value = heads_program_enrolled.value;
+});
+
+heads_institute_name.addEventListener("input", function(){
+  heads_institute_name_value = heads_institute_name.value;
+});
+
+heads_year_of_passing.addEventListener("input", function(){
+  heads_year_of_passing_value = heads_year_of_passing.value;
+});
+
+
+
+
+
+
 function submitForm(){
   if (!validateForm()){
     console.log("Wrong Submission!!!");
@@ -217,29 +248,20 @@ function submitForm(){
 function sameAsLeader(c){
   
   if(c=='e'){
-    var heads_email = document.getElementById("heads_email").value;
-
-    document.getElementsByClassName("email")[currentTab].innerHTML += heads_email;
+    document.getElementsByClassName("email")[currentTab-1].value = heads_email_value;
   }
 
   if(c=='p'){
-    var heads_program_enrolled = document.getElementById("heads_program_enrolled").value;
-
-    document.getElementsByClassName("program_enrolled")[currentTab].innerHTML = heads_email;
+    document.getElementsByClassName("program_enrolled")[currentTab-1].value = heads_program_enrolled_value;
   }
 
   if(c=='i'){
-    var heads_institute_name = document.getElementById("heads_institute_name").value;
-
-    document.getElementsByClassName("institute_name")[currentTab].innerHTML = heads_email;
+    document.getElementsByClassName("institute_name")[currentTab-1].value = heads_institute_name_value;
   }
 
   if(c=='y'){
-    var heads_email = document.getElementById("heads_year_of_passing").value;
-
-    document.getElementsByClassName("year_of_passing")[currentTab].innerHTML = heads_email;
+    document.getElementsByClassName("year_of_passing")[currentTab-1].value = heads_year_of_passing_value;
   }
-
 }
 
 

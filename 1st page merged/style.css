@@ -135,7 +135,7 @@ select.invalid {
 }
 
 .mem_info img{
-    height: 30px;
+    /* height: 30px; */
     width: 20%;
 }
 
@@ -357,6 +357,16 @@ select.invalid {
     background-size:contain;
     background-repeat: no-repeat;
     background-position: 0 50%;
+    line-height: 42px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.same_as_leader p{
+    padding-right: 3px;
+    font-family: "Karla";
+    color: #fff;
+    font-size:1em ;
 }
 
 .same_as_leader:hover{
