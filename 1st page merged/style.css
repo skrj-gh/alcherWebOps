@@ -40,6 +40,23 @@ body{
     justify-content: center;
 }
 
+.fake_arr_back{
+    position: relative;
+    /* background-image: url('./images/arrow-bg.png'); */
+    /* background-repeat: no-repeat; */
+    width: 10vw !important;
+    height: calc((277/425)*10vw);
+    z-index: 10;
+    /* background-size:cover; */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
 .arrows img{
     width: 3vw;
 }
@@ -82,12 +99,22 @@ input{
     border: 1px solid #000;
 }
 
+input.invalid {
+    background-color: #ffdddd48;
+    border: 1px solid #F22405;
+}
+
 select{
     width: 100%;
     padding: 12px 10px;
     margin-top: 10px;
     background: transparent;
     border: 1px solid #000;
+}
+
+select.invalid {
+    background-color: #ffdddd48;
+    border: 1px solid #F22405;
 }
 
 #select option{
@@ -314,6 +341,28 @@ select{
     padding-left: 10%;
 }
 
+.same_input{
+    display: flex;
+}
+
+.same_as_leader{
+    /* padding: 12px 10px; */
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #000;
+    width: 45% !important;
+    outline: none;
+    border-width: 1px 1px 1px 0px ;
+    background-image: url('./images/same-flag.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+}
+
+.same_as_leader:hover{
+    cursor: pointer;
+}
+
 .same-flag{
     /* input[type=text] {
         height:5vh;
@@ -327,10 +376,13 @@ select{
         background-repeat: no-repeat;
         padding-left:7vw;
     } */
-    background-image: url('./images/same-flag.png');
-    background-size: 45%;
-    background-position: 97% 50%;
-    background-repeat: no-repeat;
+    width: 55% !important;
+    outline: none;
+    border-width: 1px 0 1px 1px ;
+    /* background-image: url('./images/same-flag.png'); */
+    /* background-size: 45%; */
+    /* background-position: 97% 50%; */
+    /* background-repeat: no-repeat; */
 }
 
 

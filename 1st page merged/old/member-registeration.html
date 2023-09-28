@@ -51,8 +51,8 @@
                     <h1>Registerations</h1>
                 </div>
                 <div class="arrows">
-                    <a href="registeration.html"><div class="arrow"><img src="./images/arrow-back.png" alt="back"></div></a>
-                    <a href="member-registeration.html"><div class="arrow"><img src="./images/arrow-next.png" alt="next"></div></a>
+                    <a href="registeration.html"><div class="arrow" onclick="nextPrev(-1)"><img src="./images/arrow-back.png" alt="back"></div></a>
+                    <a href="member-registeration.html"><div class="arrow" onclick="nextPrev(1)"><img src="./images/arrow-next.png" alt="next"></div></a>
                 </div>
                 <div class="form">
                     <p>All fields marked with <span>*</span> are mandatory.</p>
@@ -94,8 +94,12 @@
                                     <input type="text" id="members_contact_number" name="members_contact_number" class="form-field">
                                 </div>
                                 <div class="right-input-field">
-                                    <label for="email" class="form-field">E - mail <span>*</span></label><br>
-                                    <input type="text" id="email" name="email" class="form-field same-flag">
+                                    <label for="email" class="form-field">E - 
+                                    mail <span>*</span></label><br>
+                                    <div class="same_input">
+                                        <input type="text" id="email" name="email" class="form-field same-flag">
+                                        <div class="same_as_leader" onclick="sameAsLeader()"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mem_info">
@@ -187,6 +191,7 @@
     <script src="../HeroSection/Hero-section-page1/script.js"></script>
     <script src="../competition/compApp.js"></script>
     <script src="../Schedule/script.js"></script>
+    <script src="main2.js"></script>
 </body>
 
 </html>
