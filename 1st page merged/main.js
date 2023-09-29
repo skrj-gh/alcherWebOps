@@ -148,7 +148,7 @@ function nextPrev(n) {
 
   currentTab = currentTab + n;
 
-  if(tab.indexOf(currentTab) == -1){
+  if(tab.indexOf(currentTab) == -1 && n==1){
     alert("No next page exists, ADD Memebers");
     currentTab = currentTab - n;
     return false;
@@ -191,8 +191,8 @@ function addMem() {
   
   
   tab.push(currentTab);
-  console.log(tab);
-  console.log(currentTab);
+  // console.log(tab);
+  // console.log(currentTab);
 
 
   addMember(currentTab);
@@ -200,10 +200,9 @@ function addMem() {
 
 
 function delMem(){
-  console.log('del yaha bhi aa raha hai');
 
-  numOfMem--;
-
+  // console.log(tab);
+  // console.log(currentTab);
   var i;
   
   var remForm = document.getElementsByClassName("mem_form")[currentTab];
@@ -213,16 +212,18 @@ function delMem(){
     tab[i]--;
   }
 
-  console.log(tab);
+  // console.log(tab);
 
   tab.splice(currentTab,currentTab);
   
-  console.log(tab);
+  // console.log(tab);
 
   currentTab --;
-
-  document.getElementsByClassName("mem-no")[currentTab].innerHTML = `<p>${currentTab+1}</p>`;
-
+  numOfMem--;
+  if(numOfMem!=0){
+    document.getElementsByClassName("mem-no")[currentTab].innerHTML = `<p>${currentTab+1}</p>`;
+  }
+  
   showTab(currentTab);
 }
 
@@ -295,45 +296,53 @@ function validateForm() {
   v = document.getElementsByClassName("left-input-field");
   x = document.getElementsByClassName("right-input-field");
 
-  w = v[currentTab].getElementsByTagName("input");
-  y = x[currentTab].getElementsByTagName("input");
-  u = x[currentTab].getElementsByTagName("select");
-
   // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
+  for (i = 0; i < x.length; i++) {
+    if(i%4==0||i%4==3){
+      // console.log("jdf");
+      continue;
+    }
+    // console.log(404);
+
+    y = x[i].getElementsByTagName("input");
+    
     // If a field is empty...
-    if (y[i].value === "") {
+    if (y[0].value === "") {
+      console.log(y);
       // add an "invalid" class to the field:
-      y[i].className += " invalid";
+      y[0].className += " invalid";
       // console.log(y[i]);
       // and set the current valid status to false
       valid = false;
     }
   }
 
-  for (i = 0; i < u.length; i++) {
+  for (i = 0; i < x.length; i++) {
+    if(i%4!=0){
+      continue;
+    }
+    u = x[i].getElementsByTagName("select");
     // If a field is empty...
-    if (u[i].value === "") {
+    if (u[0].value === "") {
       // add an "invalid" class to the field:
-      u[i].className += " invalid";
+      u[0].className += " invalid";
       // console.log(u[i]);
       // and set the current valid status to false
       valid = false;
     }
   }
 
-  for (i = 0; i < w.length; i++) {
+  for (i = 0; i < v.length; i++) {
+    w = v[i].getElementsByTagName("input");
     // If a field is empty...
-    if (w[i].value === "") {
+    if (w[0].value === "") {
       // add an "invalid" class to the field:
-      w[i].className += " invalid";
+      w[0].className += " invalid";
       // console.log(w[i]);
       // and set the current valid status to false
       valid = false;
     }
   }
-
-  console.log(valid);
 
   return valid; 
 }
