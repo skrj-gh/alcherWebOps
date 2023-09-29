@@ -182,18 +182,18 @@ function addMem() {
   for(i=currentTab;i<tab.length;i++){
     currentTab++;
   }
-  
-  
-  tab.push(currentTab);
-  console.log(tab);
-  console.log(currentTab);
-
   if (currentTab >= numOfParticipants) {
 
     alert("Can't add more members");
     return false;
   
   }
+  
+  
+  tab.push(currentTab);
+  console.log(tab);
+  console.log(currentTab);
+
 
   addMember(currentTab);
 }
@@ -206,8 +206,10 @@ function delMem(){
 
   var i;
   
+  var remForm = document.getElementsByClassName("mem_form")[currentTab];
+  remForm.parentNode.removeChild(remForm);
+
   for(i=currentTab+1;i<tab.length;i++){
-    console.log(1362);
     tab[i]--;
   }
 
@@ -217,7 +219,9 @@ function delMem(){
   
   console.log(tab);
 
-  currentTab = currentTab --;
+  currentTab --;
+
+  document.getElementsByClassName("mem-no")[currentTab].innerHTML = `<p>${currentTab+1}</p>`;
 
   showTab(currentTab);
 }
