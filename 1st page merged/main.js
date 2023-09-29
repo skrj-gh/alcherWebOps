@@ -218,11 +218,11 @@ function delMem(){
   
   // console.log(tab);
 
-  currentTab --;
-  numOfMem--;
-  if(numOfMem!=0){
+  if(numOfMem!=0 && (currentTab)!=numOfMem){
     document.getElementsByClassName("mem-no")[currentTab].innerHTML = `<p>${currentTab+1}</p>`;
   }
+  numOfMem--;
+  currentTab --;
   
   showTab(currentTab);
 }

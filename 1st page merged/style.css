@@ -91,32 +91,6 @@ body{
     font-weight: 900;
 }
 
-input{
-    width: 100%;
-    padding: 12px 10px;
-    margin-top: 10px;
-    background: transparent;
-    border: 1px solid #000;
-}
-
-input.invalid {
-    background-color: #ffdddd48;
-    border: 1px solid #F22405;
-}
-
-select{
-    width: 100%;
-    padding: 12px 10px;
-    margin-top: 10px;
-    background: transparent;
-    border: 1px solid #000;
-}
-
-select.invalid {
-    background-color: #ffdddd48;
-    border: 1px solid #F22405;
-}
-
 #select option{
     width: 80%;
     padding: 12px 10px;
@@ -185,14 +159,14 @@ select.invalid {
     align-items: center;
 }
 .button-register{
-   background-color: #F22405;
-   border-radius: 15px;
-   padding: 0.5vw 3.5vw;
-   margin-top: 10vh;
-   color: white;
-   border: none;
-   align-items: center;
-    margin-bottom: 10%;
+    background-color: #F22405;
+    border-radius: 15px;
+    padding: 0.5vw 3.5vw;
+    margin-top: 10vh;
+    color: white;
+    border: none;
+    align-items: center;
+    margin-bottom: 10vh;
     display: flex;
 }
 .button-register p{
@@ -345,6 +319,56 @@ select.invalid {
     display: flex;
 }
 
+
+input{
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #000;
+    height: 6.1vh;
+}
+
+input[type="text"] {
+    font-size:2.5vh;
+    font-family: "karla";
+    font-weight: 900;
+}
+
+input.invalid {
+    background-color: #ffdddd48;
+    border: 1px solid #F22405;
+}
+
+select{
+    width: 100%;
+    /* padding: 12px 10px; */
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #000;
+    height: 6.5vh;
+    font-size: 2.5vh;
+    font-family: "karla";
+    font-weight: 900;
+}
+
+select.invalid {
+    background-color: #ffdddd48;
+    border: 1px solid #F22405;
+}
+
+option{
+    font-size: 2vh;
+    font-family: "karla";
+    font-weight: 900;
+}
+
+.same-flag{
+    width: 55% !important;
+    outline: none;
+    border-width: 1px 0 1px 1px ;
+}
+
 .same_as_leader{
     /* padding: 12px 10px; */
     margin-top: 10px;
@@ -354,50 +378,71 @@ select.invalid {
     outline: none;
     border-width: 1px 1px 1px 0px ;
     background-image: url('./images/same-flag.png');
+    background-position:right;
     background-size:contain;
     background-repeat: no-repeat;
-    background-position: 0 50%;
-    line-height: 42px;
+    /* background-position: 0 50%; */
+    line-height: 6.1vh;
     display: flex;
     justify-content: flex-end;
+    height: 6.1vh;
 }
 
 .same_as_leader p{
     padding-right: 3px;
     font-family: "Karla";
     color: #fff;
-    font-size:1em ;
+    font-size:2vh !important;
 }
 
 .same_as_leader:hover{
     cursor: pointer;
 }
 
-.same-flag{
-    /* input[type=text] {
-        height:5vh;
-        border-radius: 4vh;
+
+
+
+@media (max-height: 1368px) and (max-width:920px){
+
+    input{
+        height: 5vh;
+    }
+    
+    input[type="text"] {
+        font-size:2vh;
+    }
+    
+    select{
+        height: 5vh;
         font-size: 2vh;
-        background-color: #f3f3f3;
-        border-style: none;
-        background-image: url('search.jpg');
-        background-size: 4vh;
-        background-position: 0.5vh 0.9vh; 
-        background-repeat: no-repeat;
-        padding-left:7vw;
+    }
+    
+    option{
+        font-size: 1vh;
+    }
+/*     
+    .same-flag{
+        width: 55% !important;
+        outline: none;
+        border-width: 1px 0 1px 1px ;
     } */
-    width: 55% !important;
-    outline: none;
-    border-width: 1px 0 1px 1px ;
-    /* background-image: url('./images/same-flag.png'); */
-    /* background-size: 45%; */
-    /* background-position: 97% 50%; */
-    /* background-repeat: no-repeat; */
+    
+    .same_as_leader{
+        height: 5vh;
+        line-height: 5vh;
+    }
+    
+    .same_as_leader p{
+        font-size:1.2vh !important;
+    }
 }
 
 
-
-
+@media (max-height: 770px) and (max-width:1024){
+    .same_as_leader p{
+        font-size:1.6vh !important;
+    }
+}
 
 
 @media screen and (max-width:1000px) {
@@ -416,10 +461,10 @@ select.invalid {
         padding-left: 5%;
     }
 
-        .button-register{
-            margin-top: 4vh;
-            margin-bottom: 6vh ;
-        }
+    .button-register{
+        margin-top: 4vh;
+        /* margin-bottom: 6vh ; */
+    }
 
     /* .action-buttons{
         justify-content: center;
@@ -493,7 +538,7 @@ select.invalid {
 
     .button-register{
         margin-top: 4vh;
-        margin-bottom: 6vh ;
+        /* margin-bottom: 6vh ; */
     }
 
     .action-buttons{
@@ -529,3 +574,4 @@ select.invalid {
         font-size: 15px;
     }
 }
+
